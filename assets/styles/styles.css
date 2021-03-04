@@ -674,10 +674,10 @@ button {
   z-index: 2;
 }
 .profile-picture__background-inset {
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  top: -4px;
-  left: -4px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: -3px;
   background: #195d97;
   -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
           clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
@@ -732,6 +732,31 @@ button {
   -webkit-clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
           clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
   bottom: 0;
+}
+
+.add-button {
+  height: 55px;
+  width: 40px;
+  position: absolute;
+  right: 110px;
+  border-left: 1px solid #243644;
+  border-right: 1px solid #243644;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.add-button i {
+  color: #607e9a;
+}
+.add-button:hover {
+  cursor: pointer;
 }
 
 .centered {

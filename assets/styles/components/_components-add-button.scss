@@ -1,0 +1,19 @@
+.add-button {
+  height: 55px;
+  width: 40px;
+  position: absolute;
+  right: 110px;
+  border-left: 1px solid $gray-600;
+  border-right: 1px solid $gray-600;
+  text-align: center;
+
+  @include centered-content;
+
+  i {
+    color: $green-500;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
