@@ -1,12 +1,10 @@
-//@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 @font-face {
-  font-family: "Eurostyle Extended";
-  src: url("../../font/EurostileExtended.ttf") format("truetype");
+  font-family: EurostileExtended;
+  src: url(../font/EurostileExtended.woff);
 }
 
 html {
-  font-family: "Eurostile";
+  font-family: EurostileExtended;
 }
 
 h1,
@@ -21,7 +19,7 @@ h6,
 .h4-like,
 .h5-like,
 .h6-like {
-  font-family: "Eurostile Extended";
+  font-family: EurostileExtended;
 }
 
 @each $header,

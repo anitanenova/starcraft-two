@@ -93,6 +93,16 @@
     z-index: 1;
     background: $blue-400;
     box-shadow: $shadow-1dp;
+    clip-path: polygon(
+      5% 0,
+      95% 0,
+      100% 5%,
+      100% 95%,
+      95% 100%,
+      5% 100%,
+      0 95%,
+      0 5%
+    );
   }
 
   &__background__line-left,
@@ -100,7 +110,7 @@
     @include centered-vertically;
 
     width: 2px;
-    height: 45px;
+    height: 40px;
   }
 
   &__background__line-top,
@@ -108,25 +118,18 @@
     @include centered-horizontally;
 
     height: 2px;
-    width: 45px;
-  }
-
-  &__background__line-left {
-    clip-path: polygon(0 0, 100% 9%, 100% 90%, 0% 100%);
+    width: 40px;
   }
 
   &__background__line-right {
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
     right: 0;
   }
 
   &__background__line-top {
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
     top: 0;
   }
 
   &__background__line-bottom {
-    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
     bottom: 0;
   }
 }

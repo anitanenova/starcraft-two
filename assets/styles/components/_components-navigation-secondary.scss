@@ -3,11 +3,13 @@
   height: 50px;
 
   &__nav-menu__item {
-    &:not(:first-child):before {
+    &:not(:first-child)::before {
       content: "";
       width: 1px;
       height: 24px;
       background-color: $gray-600;
+      transform: translateY(50%);
+      position: absolute;
     }
 
     &__link {
