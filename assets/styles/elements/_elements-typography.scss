@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Eurostyle Extended";
-  src: url("../../font/Eurostile-Reg.otf") format("truetype");
+  src: url("../../font/EurostileExtended.ttf") format("truetype");
 }
 
 html {
@@ -21,7 +21,7 @@ h6,
 .h4-like,
 .h5-like,
 .h6-like {
-  font-family: "eurostile-extended";
+  font-family: "Eurostile Extended";
 }
 
 @each $header,

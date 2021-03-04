@@ -6,3 +6,9 @@
 @mixin margin-top-bottom-none {
   margin: 0 auto;
 }
+
+@mixin centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

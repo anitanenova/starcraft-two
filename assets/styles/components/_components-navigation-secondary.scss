@@ -1,0 +1,18 @@
+.header__navigation-secondary {
+  background-color: $black-900;
+  height: 40px;
+
+  &__nav-menu__item {
+    &:not(:first-child):before {
+      content: "";
+      width: 1px;
+      height: 24px;
+      background-color: $gray-600;
+    }
+
+    &__link {
+      color: $green-700;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.header__navigation-primary {
+  background-color: $black-800;
+  height: 45px;
+  position: relative;
+
+  &__nav-menu__item {
+    height: 100%;
+    border-left: 1px solid $gray-600;
+
+    &:last-child {
+      border-right: 1px solid $gray-600;
+    }
+
+    &__link {
+      color: $green-200;
+      font-size: 16px;
+      z-index: 2;
+    }
+  }
+}
