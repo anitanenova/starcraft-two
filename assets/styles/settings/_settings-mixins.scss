@@ -12,3 +12,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin centered-vertically {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin centered-horizontally {
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -515,6 +515,15 @@ button {
   height: 100vh;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .header__navigation-primary, .header__navigation-secondary {
   border-bottom: 1px solid #243644;
   -webkit-box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
@@ -538,6 +547,7 @@ button {
   list-style: none;
   height: 100%;
   width: 100%;
+  padding-left: 90px;
 }
 .header__navigation-primary__nav-menu__item, .header__navigation-secondary__nav-menu__item {
   display: -webkit-box;
@@ -602,7 +612,7 @@ button {
 
 .header__navigation-primary {
   background-color: #131f2d;
-  height: 45px;
+  height: 55px;
   position: relative;
 }
 .header__navigation-primary__nav-menu__item {
@@ -620,7 +630,7 @@ button {
 
 .header__navigation-secondary {
   background-color: #10161e;
-  height: 40px;
+  height: 50px;
 }
 .header__navigation-secondary__nav-menu__item:not(:first-child):before {
   content: "";
@@ -631,6 +641,97 @@ button {
 .header__navigation-secondary__nav-menu__item__link {
   color: #437c95;
   font-size: 14px;
+}
+
+.profile-picture {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 20px 20px 0 0;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  -webkit-box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
+          box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
+}
+.profile-picture__image, .profile-picture__shadow, .profile-picture__background-inset, .profile-picture__background {
+  position: absolute;
+}
+.profile-picture__image {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  z-index: 3;
+}
+.profile-picture__shadow {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: -2px;
+  background: #131f2d;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  z-index: 2;
+}
+.profile-picture__background-inset {
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  top: -4px;
+  left: -4px;
+  background: #195d97;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  z-index: 1;
+}
+.profile-picture__background {
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  top: -8px;
+  left: -8px;
+  background: #0a274a;
+  -webkit-clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
+          clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
+  z-index: 0;
+}
+.profile-picture__background__line-left, .profile-picture__background__line-right, .profile-picture__background__line-top, .profile-picture__background__line-bottom {
+  position: absolute;
+  z-index: 1;
+  background: #1e5b8a;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px #040711, 0px 1px 3px #040711;
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px #040711, 0px 1px 3px #040711;
+}
+.profile-picture__background__line-left, .profile-picture__background__line-right {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 45px;
+}
+.profile-picture__background__line-top, .profile-picture__background__line-bottom {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2px;
+  width: 45px;
+}
+.profile-picture__background__line-left {
+  -webkit-clip-path: polygon(0 0, 100% 9%, 100% 90%, 0% 100%);
+          clip-path: polygon(0 0, 100% 9%, 100% 90%, 0% 100%);
+}
+.profile-picture__background__line-right {
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+          clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  right: 0;
+}
+.profile-picture__background__line-top {
+  -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+          clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  top: 0;
+}
+.profile-picture__background__line-bottom {
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+          clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+  bottom: 0;
 }
 
 .centered {

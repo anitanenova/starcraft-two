@@ -1,0 +1,132 @@
+.profile-picture {
+  align-self: flex-end;
+  margin: 20px 20px 0 0;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  box-shadow: $primary-shadow;
+
+  &__image,
+  &__shadow,
+  &__background-inset,
+  &__background {
+    position: absolute;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      5% 0,
+      95% 0,
+      100% 5%,
+      100% 95%,
+      95% 100%,
+      5% 100%,
+      0 95%,
+      0 5%
+    );
+    z-index: 3;
+  }
+
+  &__shadow {
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    background: $black-800;
+    clip-path: polygon(
+      5% 0,
+      95% 0,
+      100% 5%,
+      100% 95%,
+      95% 100%,
+      5% 100%,
+      0 95%,
+      0 5%
+    );
+    z-index: 2;
+  }
+
+  &__background-inset {
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    top: -4px;
+    left: -4px;
+    background: $blue-600;
+    clip-path: polygon(
+      5% 0,
+      95% 0,
+      100% 5%,
+      100% 95%,
+      95% 100%,
+      5% 100%,
+      0 95%,
+      0 5%
+    );
+    z-index: 1;
+  }
+  &__background {
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    top: -8px;
+    left: -8px;
+    background: $blue-900;
+    clip-path: polygon(
+      7% 0,
+      93% 0,
+      100% 7%,
+      100% 93%,
+      93% 100%,
+      7% 100%,
+      0 93%,
+      0 7%
+    );
+    z-index: 0;
+  }
+
+  &__background__line-left,
+  &__background__line-right,
+  &__background__line-top,
+  &__background__line-bottom {
+    position: absolute;
+    z-index: 1;
+    background: $blue-400;
+    box-shadow: $shadow-1dp;
+  }
+
+  &__background__line-left,
+  &__background__line-right {
+    @include centered-vertically;
+
+    width: 2px;
+    height: 45px;
+  }
+
+  &__background__line-top,
+  &__background__line-bottom {
+    @include centered-horizontally;
+
+    height: 2px;
+    width: 45px;
+  }
+
+  &__background__line-left {
+    clip-path: polygon(0 0, 100% 9%, 100% 90%, 0% 100%);
+  }
+
+  &__background__line-right {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    right: 0;
+  }
+
+  &__background__line-top {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    top: 0;
+  }
+
+  &__background__line-bottom {
+    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+    bottom: 0;
+  }
+}
