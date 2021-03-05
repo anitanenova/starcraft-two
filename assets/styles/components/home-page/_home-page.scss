@@ -1,8 +1,22 @@
-.home-page--wrapper {
-  background-image: url("../images/protoss-starcraft-2-ladder.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
+.home-page {
+  &--wrapper {
+    background-image: url("../images/protoss-starcraft-2-ladder.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__content {
+    padding: 20px 110px;
+
+    &__portraits__title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 3px #295fa7, 1px 1px 2px #295fa7;
+      text-transform: uppercase;
+    }
+  }
 }

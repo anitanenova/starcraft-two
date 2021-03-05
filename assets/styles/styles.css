@@ -265,85 +265,6 @@ summary {
   display: list-item;
 }
 
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-in-hover {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
-@keyframes fade-in-hover {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
-@-webkit-keyframes bigger {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-@keyframes bigger {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-@-webkit-keyframes animated-border {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-  }
-}
-@keyframes animated-border {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-  }
-}
-.container {
-  max-width: 1250px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 @font-face {
   font-family: EurostileExtended;
   src: url(../font/EurostileExtended.woff);
@@ -506,15 +427,6 @@ button {
   font-weight: 800;
 }
 
-.home-page--wrapper {
-  background-image: url("../images/protoss-starcraft-2-ladder.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,8 +438,8 @@ button {
 }
 .header__navigation-primary, .header__navigation-secondary {
   border-bottom: 1px solid #243644;
-  -webkit-box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
-          box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
+  -webkit-box-shadow: 0px 1px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
+          box-shadow: 0px 1px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
 }
 .header__navigation-primary__nav-menu, .header__navigation-secondary__nav-menu {
   margin: 0;
@@ -609,7 +521,7 @@ button {
 }
 
 .header__navigation-primary {
-  background-color: #131f2d;
+  background-color: #101b28;
   height: 55px;
   position: relative;
 }
@@ -627,7 +539,7 @@ button {
 }
 
 .header__navigation-secondary {
-  background-color: #10161e;
+  background-color: #080c15;
   height: 50px;
 }
 .header__navigation-secondary__nav-menu__item:not(:first-child)::before {
@@ -644,64 +556,201 @@ button {
   font-size: 14px;
 }
 
+.portrait {
+  width: 120px;
+  height: 150px;
+  position: relative;
+}
+.portrait__content {
+  width: 106px;
+  height: 136px;
+  left: 1px;
+  top: 1px;
+  background: #0d1427;
+  position: absolute;
+  z-index: 4;
+  border: 2px solid #111d2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-clip-path: polygon(2% 0, 98% 0, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0 98%, 0 2%);
+          clip-path: polygon(2% 0, 98% 0, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0 98%, 0 2%);
+}
+.portrait__content__image {
+  width: 100%;
+  z-index: 4;
+}
+.portrait__content__image--wrapper {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #111d2d;
+  margin-top: 3px;
+  overflow: hidden;
+  z-index: 4;
+}
+.portrait__content__name {
+  color: #56a2ba;
+  font-size: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 2px;
+  z-index: 4;
+}
+.portrait__background__shadow {
+  background: #0c192a;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  -webkit-box-shadow: 0px 1px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
+          box-shadow: 0px 1px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
+  -webkit-clip-path: polygon(3% 0, 97% 0, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0 97%, 0 3%);
+          clip-path: polygon(3% 0, 97% 0, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0 97%, 0 3%);
+  position: absolute;
+  z-index: 1;
+}
+.portrait__background__shadow--left, .portrait__background__shadow--top, .portrait__background__shadow--bottom, .portrait__background__shadow--right {
+  background-color: #0c192a;
+  -webkit-clip-path: polygon(9% 0, 91% 0, 100% 9%, 100% 91%, 91% 100%, 9% 100%, 0 91%, 0 9%);
+          clip-path: polygon(9% 0, 91% 0, 100% 9%, 100% 91%, 91% 100%, 9% 100%, 0 91%, 0 9%);
+  position: absolute;
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.portrait__background__shadow--left {
+  left: -1px;
+  top: 0;
+}
+.portrait__background__shadow--top {
+  top: 0;
+  right: 0px;
+}
+.portrait__background__shadow--bottom {
+  bottom: -1px;
+  left: -1px;
+}
+.portrait__background__shadow--right {
+  bottom: -1px;
+  right: 0px;
+}
+.portrait__background {
+  background: #1f3962;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  left: 3px;
+  top: 2px;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  position: absolute;
+  z-index: 2;
+}
+.portrait__background--left, .portrait__background--top, .portrait__background--bottom, .portrait__background--right {
+  background-color: #1f3962;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+}
+.portrait__background--left {
+  left: 0;
+  top: 0;
+}
+.portrait__background--top {
+  top: 0;
+  right: 0;
+}
+.portrait__background--bottom {
+  bottom: -1px;
+  left: 0;
+}
+.portrait__background--right {
+  bottom: 0;
+  right: 0;
+}
+.portrait__background__inset {
+  background: #346484;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 3px;
+  top: 4px;
+  -webkit-clip-path: polygon(2% 0, 98% 0, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0 98%, 0 2%);
+          clip-path: polygon(2% 0, 98% 0, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0 98%, 0 2%);
+  position: absolute;
+  z-index: 3;
+}
+
 .profile-picture {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 20px 20px 0 0;
   position: absolute;
-  width: 65px;
-  height: 65px;
-  -webkit-box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
-          box-shadow: 0px 0.5px 2px #040711, 0px 0.5px 2px #040711, 0px 0.5px 3px #040711;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0px -10px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
+          box-shadow: 0px -10px 2px #040711, 0px 1px 2px #040711, 0px 1px 3px #040711;
 }
 .profile-picture__image, .profile-picture__shadow, .profile-picture__background-inset, .profile-picture__background {
   position: absolute;
 }
 .profile-picture__image {
-  width: 100%;
-  height: 100%;
   -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
           clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  width: 100%;
+  height: 100%;
   z-index: 3;
 }
 .profile-picture__shadow {
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   top: -2px;
   left: -2px;
-  background: #131f2d;
-  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
-          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  background: #101b28;
   z-index: 2;
 }
 .profile-picture__background-inset {
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
   width: calc(100% + 6px);
   height: calc(100% + 6px);
   top: -3px;
   left: -3px;
   background: #195d97;
-  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
-          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
   z-index: 1;
 }
 .profile-picture__background {
+  -webkit-clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
+          clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
   width: calc(100% + 16px);
   height: calc(100% + 16px);
   top: -8px;
   left: -8px;
   background: #0a274a;
-  -webkit-clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
-          clip-path: polygon(7% 0, 93% 0, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0 93%, 0 7%);
   z-index: 0;
 }
 .profile-picture__background__line-left, .profile-picture__background__line-right, .profile-picture__background__line-top, .profile-picture__background__line-bottom {
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
   position: absolute;
   z-index: 1;
   background: #1e5b8a;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px #040711, 0px 1px 3px #040711;
           box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px #040711, 0px 1px 3px #040711;
-  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
-          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
 }
 .profile-picture__background__line-left, .profile-picture__background__line-right {
   top: 50%;
@@ -730,11 +779,11 @@ button {
 .add-button {
   height: 55px;
   width: 50px;
-  position: absolute;
-  right: 110px;
   border-left: 1px solid #243644;
   border-right: 1px solid #243644;
   text-align: center;
+  position: absolute;
+  right: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,17 +801,21 @@ button {
   cursor: pointer;
 }
 
-.centered {
-  text-align: center;
+.home-page--wrapper {
+  background-image: url("../images/protoss-starcraft-2-ladder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-
-.fade-in {
-  -webkit-animation: fade-in 1.5s forwards ease-out;
-          animation: fade-in 1.5s forwards ease-out;
+.home-page__content {
+  padding: 20px 110px;
 }
-
-.bigger:hover {
-  cursor: pointer;
-  -webkit-animation: bigger 0.5s forwards ease-out;
-          animation: bigger 0.5s forwards ease-out;
+.home-page__content__portraits__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 3px #295fa7, 1px 1px 2px #295fa7;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
