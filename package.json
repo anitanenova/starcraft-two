@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/anitanenova/starcraft-two/issues"
   },
-  "homepage": "https://github.com/anitanenova/starcraft-two#readme"
+  "homepage": "https://github.com/anitanenova/starcraft-two#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
 }
